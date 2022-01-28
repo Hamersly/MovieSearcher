@@ -1,6 +1,6 @@
 import { all } from "redux-saga/effects";
-import getFilmsSaga from "./movieLayer/saga";
+import {getDetailsSaga, getMoviesSaga} from "./movieLayer/saga";
 
 export default function* rootSaga() {
-  yield all([getFilmsSaga()]);
+  yield all([getMoviesSaga(), getDetailsSaga()]);
 }

@@ -16,3 +16,8 @@ export const formatSelector = createSelector(
   movie,
   (state) => state.movie.format
 );
+
+export const detailSelector = createSelector(
+	movie,
+	(state) => state.movie.detail
+)

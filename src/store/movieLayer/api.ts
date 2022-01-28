@@ -13,7 +13,22 @@ export async function listApi(
     .then((response: any) => response.data)
     .catch((error) => console.log(error));
 
-  // console.log(results);
+  console.log(results);
 
   return { page, results };
+}
+
+export async function detailApi(format:string, id:string): Promise<object> {
+  const API_KEY: string | undefined = process.env.REACT_APP_API_KEY;
+  const BASE_URL: string = "https://api.themoviedb.org/3";
+  const url: string = `${BASE_URL}/${format}/${id}?api_key=${API_KEY}&language=ru-RU`;
+
+  const results: any = await axios
+    .get(url)
+    .then((response: any) => response.data)
+    .catch((error) => console.log(error));
+
+  console.log(results);
+
+  return results;
 }
