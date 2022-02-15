@@ -4,6 +4,7 @@ import { MoviePage } from "./pages/MoviePage";
 import {DetailPage} from "./pages/DetailPage";
 import {TvPage} from "./pages/TvPage";
 import {Header} from "./components/Header";
+import {SearchPage} from "./pages/SearchPage";
 
 export function App() {
 
@@ -20,10 +21,13 @@ export function App() {
         <Route path="/tv">
           <TvPage />
         </Route>
+        <Route path="/search_results">
+          <SearchPage />
+        </Route>
         <Route path={"/:info"}>
           <DetailPage />
         </Route>
-        {/*<Redirect to="/" />*/}
+        <Redirect to="/" />
       </Switch>
     </HashRouter>
   );

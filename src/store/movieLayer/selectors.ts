@@ -21,3 +21,13 @@ export const detailSelector = createSelector(
 	movie,
 	(state) => state.movie.detail
 )
+
+export const searchQuerySelector = createSelector(
+	movie,
+	(state) => state.movie.searchValue
+)
+
+export const searchListSelector = createSelector(
+	movie,
+	(state) => state.movie.searchList
+)

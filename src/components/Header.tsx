@@ -7,6 +7,7 @@ import {useDispatch} from "react-redux";
 import IconButton from "@mui/material/IconButton";
 import {getContentList} from "../store/movieLayer/actions";
 import {Link} from "react-router-dom";
+import {Search} from "./Search"
 
 export const Header = () => {
 	const dispatch = useDispatch();
@@ -19,6 +20,7 @@ export const Header = () => {
 	return (
 		<AppBar position="static" sx={{width: "100%"}}>
 			<Toolbar>
+				<Search />
 				<Link className="link" to="/movie">
 					<IconButton
 						size="large"
