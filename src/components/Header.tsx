@@ -20,7 +20,7 @@ export const Header = () => {
 	return (
 		<AppBar position="static" sx={{width: "100%"}}>
 			<Toolbar>
-				<Search />
+				<Search/>
 				<Link className="link" to="/movie">
 					<IconButton
 						size="large"
@@ -44,6 +44,9 @@ export const Header = () => {
 					>
 						<LiveTvIcon/>
 					</IconButton>
+				</Link>
+				<Link className="link" to="/">
+					Главная
 				</Link>
 			</Toolbar>
 		</AppBar>

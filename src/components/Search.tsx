@@ -5,7 +5,6 @@ import InputBase from '@mui/material/InputBase';
 import SearchIcon from '@mui/icons-material/Search';
 import {useDispatch} from "react-redux";
 import {searchValue} from "../store/movieLayer/actions";
-import {Link} from "react-router-dom";
 
 const SearchTag = styled('div')(({theme}) => ({
 	position: 'relative',
@@ -70,7 +69,7 @@ export const Search = () => {
 			<SearchIconWrapper>
 				<SearchIcon sx={{color: "black"}}/>
 			</SearchIconWrapper>
-			<Link className="link" to="/search_results">
+			{/*<Link className="link" to="/search_results">*/}
 			<StyledInputBase
 				placeholder="Search…"
 				inputProps={{'aria-label': 'search'}}
@@ -78,7 +77,7 @@ export const Search = () => {
 				onChange={(e) => setQuery(e.target.value)}
 				onKeyDown={handleSubmit}
 			/>
-				</Link>
+			{/*</Link>*/}
 		</SearchTag>
 	);
 };

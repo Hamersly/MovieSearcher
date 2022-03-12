@@ -1,4 +1,4 @@
-import { createSelector } from "@reduxjs/toolkit";
+import {createSelector} from "@reduxjs/toolkit";
 
 const movie = (state: any) => state;
 
@@ -7,14 +7,14 @@ export const allSelector = createSelector(movie, (state) => {
 	return state.movie
 });
 
-export const movieSelector = createSelector(
-  movie,
-  (state) => state.movie.content
+export const contentSelector = createSelector(
+	movie,
+	(state) => state.movie.content
 );
 
 export const formatSelector = createSelector(
-  movie,
-  (state) => state.movie.format
+	movie,
+	(state) => state.movie.format
 );
 
 export const detailSelector = createSelector(

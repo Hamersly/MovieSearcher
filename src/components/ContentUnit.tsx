@@ -2,15 +2,14 @@ import {Box} from "@mui/material";
 import React from "react";
 import Backdrop from "@mui/material/Backdrop";
 import Typography from "@mui/material/Typography";
-import {Route, Link, useRouteMatch} from "react-router-dom";
-import {DetailPage} from "../pages/DetailPage";
+import {Link} from "react-router-dom";
 
 interface Props {
 	format: string;
 	result: any;
 }
 
-export const Movie = ({format, result}: Props) => {
+export const ContentUnit = ({format, result}: Props) => {
 	const [open, setOpen] = React.useState(false);
 
 	const handleClose = () => {
@@ -41,7 +40,7 @@ export const Movie = ({format, result}: Props) => {
 						/>
 					</Backdrop>
 				</Box>
-					<Link className="link" to={`${format}_${result.id}`}>
+				<Link className="link" to={`${format}_${result.id}`}>
 					<Box
 						sx={{
 							display: "flex",
@@ -68,9 +67,6 @@ export const Movie = ({format, result}: Props) => {
 					</Box>
 				</Link>
 			</Box>
-			{/*<Route path={`${url}/:id`}>*/}
-			{/*	<DetailPage />*/}
-			{/*</Route>*/}
 		</Box>
 	);
 };

@@ -1,7 +1,7 @@
 import {call, put, takeLeading} from "redux-saga/effects";
-import {listApi, detailApi, searchApi} from "./api";
-import {addContentList, addContentDetail, addSearchList, addSearchValue} from "./slise";
-import {getContentList, getContentDetails, searchValue} from "./actions";
+import {detailApi, listApi, searchApi} from "./api";
+import {addContentDetail, addContentList, addSearchList, addSearchValue} from "./slise";
+import {getContentDetails, getContentList, searchValue} from "./actions";
 
 export function* getMoviesSaga() {
 	yield takeLeading(getContentList, getMoviesWorker);

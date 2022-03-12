@@ -35,12 +35,12 @@ export const Detail = () => {
 				marginTop: "30px",
 				marginBottom: "30px"
 			}}>
-				<Typography variant="h3" component="div">
-					{format === "movie" ? title : name}
-				</Typography>
-				<Typography variant="h5" component="div">
-					{format === "movie" ? original_title : original_name}
-				</Typography>
+			<Typography variant="h3" component="div">
+				{format === "movie" ? title : name}
+			</Typography>
+			<Typography variant="h5" component="div">
+				{format === "movie" ? original_title : original_name}
+			</Typography>
 			<Box sx={{marginTop: "30px"}}>
 				<img width="100%"
 						 src={`https://image.tmdb.org/t/p/original${backdrop_path}`}
